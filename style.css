@@ -6,14 +6,14 @@ body{
     height: auto;
 }
 .container_2{
-    background-color: black;
+    background-color:black;
     border-radius: 50px;
     width:500px;
     height:750px;
     margin: 50px auto 50px  ;
 }
 .container_4{
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     border-radius: 50px;
     width: 100%;
     height: 100%;
@@ -113,16 +113,4 @@ span{
     grid-column: 4/5;
     grid-row: 1;
     color: rgb(226, 226, 250);
-}
-@media screen and (max-width:767px){
-    body{
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-width: 100%;
-        height: auto;
-    }
-    .container_2{
-        display: flex;
-        justify-content: center;
-    }
 }

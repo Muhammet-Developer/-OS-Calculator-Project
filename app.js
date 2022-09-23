@@ -6,7 +6,7 @@ let flag=1;
 let operator='';
 let sayi1;
 let sayi2;
-
+let operator_flag=0; 
 const calculate= () =>{
     if(operator=='+'){
         monitor.innerText=(sayi1)+(sayi2);
@@ -35,7 +35,7 @@ const calculate= () =>{
 con3.addEventListener("click",(e)=>{
     // window.onload    
 
-    if(e.target.classList.contains("operator") && !operator){
+    if(e.target.classList.contains("operator") && !operator && (operator_flag!=0)){
         flag++;
         operator=e.target.innerText;
         monitor_2.innerText=operator;
@@ -48,9 +48,11 @@ con3.addEventListener("click",(e)=>{
         sayi1=parseFloat(monitor.innerText)
         monitor_1.innerText=sayi1;
         }
+        operator_flag++;
         if(flag==2){
             sayi2=parseFloat(monitor.innerText)
         }
+
     }
     if(e.target.classList.contains("dot")){
         monitor.innerText=monitor.innerText+e.target.innerText
@@ -58,6 +60,7 @@ con3.addEventListener("click",(e)=>{
     if(e.target.classList.contains("ac")){
          flag=1;
      operator='';
+     operator_flag=0;
 
      sayi1=0;
      sayi2=0;
@@ -66,10 +69,9 @@ con3.addEventListener("click",(e)=>{
     monitor_2.innerText='';
     }
     if(e.target.classList.contains("sign")){
-        if(monitor.innerText==''){
-            monitor.innerText='-'+monitor.innerText;
+        if(monitor.innerText!== (0)){
+            monitor.innerText=monitor.innerText*(-1);
         }
-        monitor.innerText=monitor.innerText*(-1);
         if(flag==1){
             sayi1=parseFloat(monitor.innerText)
             monitor_1.innerText=sayi1;
