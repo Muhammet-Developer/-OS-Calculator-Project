@@ -114,3 +114,15 @@ span{
     grid-row: 1;
     color: rgb(226, 226, 250);
 }
+@media screen and (max-width:767px){
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: auto;
+    }
+    .container_2{
+        display: flex;
+        justify-content: center;
+    }
+}
