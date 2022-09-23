@@ -105,12 +105,13 @@ span{
 .monitor_1{
     grid-column: 1/4;
     grid-row: 1;
-    color: rgb(226, 226, 250);
+    color: gray;
     justify-content:right;
-
+    font-size: 30px;
 }
 .monitor_2{
     grid-column: 4/5;
     grid-row: 1;
-    color: rgb(226, 226, 250);
+    color: gray;
+    font-size: 30px;
 }
